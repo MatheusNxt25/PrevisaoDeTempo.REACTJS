@@ -21,7 +21,7 @@ function App() {
     })
     .then((data) =>{
       setWeatherForecast(data);
-    });s
+    });
   };
 
 
