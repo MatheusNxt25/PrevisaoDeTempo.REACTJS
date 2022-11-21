@@ -51,12 +51,14 @@ const Random = () => {
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${Capitais[Raffle(0, 26)][0]}&appid=${keyID}&units=metric`)
       .then(res => res.json())
       .then(data => {
-        const { main, name, sys } = data;
+        const { main, name, sys, } = data;
         if (sys !== undefined) {
           setCidade(
             `<div className="resultado row">
               <div>
                 <h1>${main.temp} °C </h1>
+                <h5>Max: ${main.temp_max} °C </h5>
+                <h5>Min: ${main.temp_min} °C </h5>
               </div>
               <div>
                 <h4>${sys.country}</h4>
