@@ -27,13 +27,13 @@ function App() {
 
   return (
     <div >
-        <nav className="navbar navbar-expand-md navbar-dark bg-dark  mb-4">
+        <nav className="navbar justify-content-center navbar-expand-md navbar-dark bg-primary  mb-4">
             <a class="navbar-brand text-white" href="#top">
               PREVISÃO DO TEMPO
             </a>
         </nav>
-        <main className="container">
-          <div className='jumbotron  '>
+        <main className="container ">
+          <div className='jumbotron'>
             <h1>
               Verifique agora a previsão do tempo da sua cidade!
             </h1>
@@ -50,7 +50,7 @@ function App() {
               </div>
             </div>
 
-            <button onClick={handleSearch} className="btn btn-primary btn-lg">
+            <button onClick={handleSearch} className="btn  btn-success  btn-lg">
               Pesquisar
             </button>
             {
@@ -67,6 +67,8 @@ function App() {
                           Temperatura: {weatherForecast.current.temp_c} °C
                         </p>
                         <p className='lead'>
+                        </p>
+                        <p className='lead'>
                           Data e Hora: {weatherForecast.current.last_updated} 
                         </p>
                       </div>
@@ -77,6 +79,7 @@ function App() {
 
           </div>
          </main>
+         
     </div>
   );
 }
