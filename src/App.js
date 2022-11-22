@@ -69,6 +69,12 @@ function App() {
                         <p className='lead'>
                         </p>
                         <p className='lead'>
+                          Sensação: {weatherForecast.current.feelslike_c} °C
+                        </p>
+                        <p className='lead'>
+                          Umidade: {weatherForecast.current.humidity}  %
+                        </p>
+                        <p className='lead'>
                           Data e Hora: {weatherForecast.current.last_updated} 
                         </p>
                       </div>
